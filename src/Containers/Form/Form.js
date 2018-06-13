@@ -1,9 +1,12 @@
 import React from 'react';
-import Fields from '../../Components/Fields/Fields';
+import Cards from '../Cards/Cards';
 
 const Form = (props) => {
     return (
-        <Fields fields={props.fields}/>
+        <fieldset>
+        <div className="form-head">{props.cards.name}</div>
+        <Cards cards={props.cards.cards}/>
+        </fieldset>
     )
 }
 
