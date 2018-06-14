@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import Form from './Containers/Form/Form';
 import './App.css';
 
-const fieldsArr=[
+const fieldsArr = [
   {
     id: 'fld1',
     type: 'text',
@@ -18,59 +18,93 @@ const formResp = {
   cards: [
     {
       id: 1,
-      name: 'Demo Card L 1',
+      name: 'Sign in / up',
       cards: [
         {
           id: 21,
-          name: 'Demo Card L 2',
-          
-              fields: [
-                {
-                  id: 101,
-                  type: 'label',
-                  label: {
-                    text: 'Name'
-                  }
-                },
-                {
-                  id: 102,
-                  type: 'input',
-                  input: {
-                    value: 'ABC',
-                    placeholder: 'Enter Name'
-                  }
-                }
-              ]
-            
+          name: 'Sign in',
+          fields: [
+            {
+              id: 102,
+              type: 'input',
+              options: {
+                label: 'User ID'
+              },
+              input: {
+                type: 'text',
+                value: 'ABC',
+                placeholder: 'enter name'
+              },
+              required: true,
+              validation: {
+                rule: 'not-empty'
+              }
+            }, {
+              id: 103,
+              type: 'input',
+              input: {
+                type: 'password',
+                placeholder: 'enter password'
+              },
+              options: {
+                label: 'Password'
+              },
+              required: true
+            }
+          ]
         },
         {
           id: 1001,
-          name: 'Demo Card Inner layer 1',
-          cards: [
+          name: 'Sign up',
+          fields: [
             {
-              id: 1011,
-              name: 'Demo Card Inner layer 2',
-              fields: [
-                {
-                  id: 10111,
-                  type: 'label',
-                  label: {
-                    text: 'Password'
-                  }
-                }, {
-                  id: 10112,
-                  type: 'password',
-                  password: {
-                    placeholder: 'Enter password',
-                    required: true,
-                    validationRegex: ''
-                  }
-                }
-              ]
+              id: 104,
+              type: 'input',
+              input: {
+                type: 'text',
+                placeholder: 'user@example.com'
+              },
+              options: {
+                label: 'email id'
+              },
+              required: true,
+              validation: {
+                rule: 'email'
+              }
+            }, 
+            {
+              id: 102,
+              type: 'input',
+              options: {
+                label: 'User ID'
+              },
+              input: {
+                type: 'text',
+                value: 'ABC',
+                placeholder: 'enter name'
+              },
+              required: true,
+              validation: {
+                rule: 'not-empty'
+              }
+            }, {
+              id: 103,
+              type: 'input',
+              input: {
+                type: 'password',
+                placeholder: 'enter password'
+              },
+              options: {
+                label: 'Password'
+              },
+              required: true
             }
           ]
         }
       ]
+    },
+    {
+      
     }
   ]
 };
@@ -80,7 +114,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form cards={formResp} key={formResp.id}/>
+        <Form cards={formResp} key={formResp.id} />
       </div>
     );
   }

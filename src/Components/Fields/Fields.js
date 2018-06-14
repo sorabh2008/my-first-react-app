@@ -13,7 +13,7 @@ class Fields extends Component {
     render(){
         return (
             this.props.fields.map(field=>{
-                return <Field name={field.name} value={field.value}/>
+                return <Field field={field} key={field.id}/>
             })
         )
     }
