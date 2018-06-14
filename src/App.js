@@ -98,6 +98,13 @@ const formResp = {
                 label: 'Password'
               },
               required: true
+            },
+            {
+              id: 104,
+              type: 'button',
+              options: {
+                label: 'Click Me!'
+              }
             }
           ]
         }
