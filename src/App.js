@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Form from './Containers/Form/Form';
 import './App.css';
 
@@ -71,7 +70,7 @@ const formResp = {
               validation: {
                 rule: 'email'
               }
-            }, 
+            },
             {
               id: 102,
               type: 'input',
@@ -98,9 +97,11 @@ const formResp = {
                 label: 'Password'
               },
               required: true
-            },
+            }
+          ],
+          navigation: [
             {
-              id: 104,
+              id: 105,
               type: 'button',
               options: {
                 label: 'Click Me!'
@@ -109,9 +110,6 @@ const formResp = {
           ]
         }
       ]
-    },
-    {
-      
     }
   ]
 };

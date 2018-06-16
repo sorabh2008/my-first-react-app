@@ -23,7 +23,7 @@ class Cards extends Component{
             
         } else if(!!this.props.cards) {
             
-                resp.push(<Card content={this.props.cards} key={this.props.cards.id}/>)
+                // resp.push(<Card content={this.props.cards} key={this.props.cards.id}/>)
             
         }
         
