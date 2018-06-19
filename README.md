@@ -12,3 +12,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 npm install
 npm start
 ```
+
+# Lifecycle Events (Hooks)
+- componentWillMount
+- componentDidMount
+- componentWillReceiveProps (newProps)
+- shouldComponentUpdate (newProps, newState)
+- componentWillUpdate (newProps, newState)
+- componentDidUpdate
